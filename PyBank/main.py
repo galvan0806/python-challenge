@@ -56,14 +56,16 @@ with open(budget_data_csv) as csvfile:
     print(f"Greatest Decrease in Profits: {lowest_date} (${greatest_decrease_amount})")
 
     #Export all info needed to text file
-    file = open("export.txt","w")
-    file.write("Financial Analysis" + "\n")
-    file.write("-----------------------------------------" + "\n")
-    file.write(f"Total Months: {total_months}" + "\n")
-    file.write(f"Total: ${sum(amount)}" + "\n")
-    file.write(f"Average Change: ${average_change:.2f}" + "\n")
-    file.write(f"Greatest Increase in Profits: {greatest_date} (${greatest_increase_amount})" + "\n")
-    file.write(f"Greatest Decrease in Profits: {lowest_date} (${greatest_decrease_amount})" + "\n")
-    file.close()
+    text_path = os.path.join('analysis', 'Export_Financial_Analysis.txt')
+    with open(text_path,"w") as text_file:
+    #text_file = open("Export_Financial_Analysis.txt","w")
+        text_file.write("Financial Analysis" + "\n")
+        text_file.write("-----------------------------------------" + "\n")
+        text_file.write(f"Total Months: {total_months}" + "\n")
+        text_file.write(f"Total: ${sum(amount)}" + "\n")
+        text_file.write(f"Average Change: ${average_change:.2f}" + "\n")
+        text_file.write(f"Greatest Increase in Profits: {greatest_date} (${greatest_increase_amount})" + "\n")
+        text_file.write(f"Greatest Decrease in Profits: {lowest_date} (${greatest_decrease_amount})" + "\n")
+    text_file.close()
 
 
