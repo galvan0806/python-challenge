@@ -58,7 +58,6 @@ with open(budget_data_csv) as csvfile:
     #Export all info needed to text file
     text_path = os.path.join('analysis', 'Export_Financial_Analysis.txt')
     with open(text_path,"w") as text_file:
-    #text_file = open("Export_Financial_Analysis.txt","w")
         text_file.write("Financial Analysis" + "\n")
         text_file.write("-----------------------------------------" + "\n")
         text_file.write(f"Total Months: {total_months}" + "\n")
