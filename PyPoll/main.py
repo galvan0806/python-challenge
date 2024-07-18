@@ -70,5 +70,4 @@ with open(election_data_csv) as csvfile:
         text_file.write(f"Winner: {winner_candidate}"+ "\n")
         text_file.write("-----------------------------------------" + "\n")
 
-
     text_file.close()
